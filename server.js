@@ -1,5 +1,5 @@
-const connect = require('connect');
-const app = connect();
+const express = require('express');
+const app = express();
 
 function logger(req, res, next) {
     console.log(req.method, req.url);
@@ -18,8 +18,7 @@ function goodbyeWorld(req, res, next) {
 }
 
 function homePage(req, res, next) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.end("This is the homepage");
+    res.send('This is the homepage');
 }
 
 app.use(logger);
