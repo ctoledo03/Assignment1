@@ -18,9 +18,8 @@ module.exports = function () {
   app.use(bodyParser.json());
   app.use(methodOverride());
 
-  // Define your session secret here (replace 'your-secret-key-here' with your actual secret key)
-  //const sessionSecret = 'your-secret-key-here';
-    const sessionSecret='developmentSessionSecret';
+  const sessionSecret='developmentSessionSecret';
+
   app.use(session({
     saveUninitialized: true,
     resave: true,
@@ -29,7 +28,7 @@ module.exports = function () {
 
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
-app.use('/', require('../app/routes/index.server.routes.js'));
+  app.use('/', require('../app/routes/index.server.routes.js'));
 
   // Serve static files from the 'public' directory
   app.use(express.static('./public'));
