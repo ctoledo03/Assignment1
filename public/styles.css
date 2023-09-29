@@ -151,6 +151,12 @@ ul.navbar-nav li {
     margin-bottom: -3%;
 }
 
+.formData {
+    padding-left: 19.5%;
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 /* IDs */
 #logo {
     padding-left: 30px;
@@ -188,6 +194,8 @@ ul.navbar-nav li {
     border: 5px solid white;
     border-radius: 10px;
 }
+
+
 
 
 

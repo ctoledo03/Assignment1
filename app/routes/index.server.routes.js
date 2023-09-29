@@ -22,4 +22,12 @@ router.get('/contact', function(req, res, next) {
 res.render('contact', { title: 'Contact' });
 });
 
+router.get('/formSubmit', function(req, res, next) {
+    res.render('formSubmit', { title: 'Submit Form' });
+});
+
+router.post('/submit', (req, res) => {
+    res.render('formSubmit', { data: req.body, title: 'Form Submitted' });
+});
+
 module.exports = router;
