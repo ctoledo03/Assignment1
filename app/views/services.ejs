@@ -1,61 +1,6 @@
-<!DOCTYPE html>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
 
-<html>
-    <head>
-        <title><%= title %></title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-
-    <body>
-        <header>
-            <img src="img/ctLogo.png" id="logo" alt="logo">
-
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                         <ul class="navbar-nav ml-auto"> <!-- Changed class to ml-auto for right alignment -->
-                            <% if (title=="Home"){%>
-                                <li class="nav-item active">
-                            <%}else{%>
-                                <li class="nav-item">
-                            <%}%>
-                                <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
-                            </li>
-                            <% if (title=="About Me"){%>
-                                <li class="nav-item active">
-                            <%}else{%>
-                                <li class="nav-item">
-                            <%}%>
-                                <a class="nav-link" href="/aboutme"><i class="fa-solid fa-address-card"></i>About Me</a>
-                            </li>
-                            <% if (title=="Contact"){%>
-                                <li class="nav-item active">
-                            <%}else{%>
-                                <li class="nav-item">
-                            <%}%>
-                                <a class="nav-link" href="/projects"><i class="fa-solid fa-address-book"></i>Projects</a>
-                            </li>
-                            <% if (title=="Projects"){%>
-                                <li class="nav-item active">
-                            <%}else{%>
-                                <li class="nav-item">
-                            <%}%>
-                                <a class="nav-link" href="/services"><i class="fa-brands fa-product-hunt"></i>Services</a>
-                            </li>
-                            <% if (title=="Services"){%>
-                                <li class="nav-item active">
-                            <%}else{%>
-                                <li class="nav-item">
-                            <%}%>
-                                <a class="nav-link" href="/contact"><i class="fa-brands fa-servicestack"></i>Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main>
             <h1 id="introduction">Welcome to the <%= title %> page</h1>
             
             <h2 class="projectTitle">Game Programming</h2> 
@@ -98,10 +43,5 @@
                 <a href="/projects"><button class="custom-button">My Projects</button></a>
                 <a href="/contact"><button class="custom-button">Contact Me</button></a>
             </div>
-        </main>
-
-        <footer>
-        </footer>
             
-    </body>
-</html>
+<%- include ('partials/footer.ejs') %>
